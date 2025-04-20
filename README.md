@@ -1,30 +1,40 @@
-# Recreate UI from Screenshot
+# Cryptocurrency Trading Dashboard
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A modern cryptocurrency trading dashboard built with Next.js and Tailwind CSS.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/vannam34760gmailcoms-projects/v0-recreate-ui-from-screenshot)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/FWMjp8HX92c)
+![Cryptocurrency Dashboard Interface](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-21%20at%2000.01.09-1DI8PlTigyTXyu5nPuXVjFdbqYc5Av.png)
 
-## Overview
+## Features
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+- Real-time cryptocurrency price tracking
+- Portfolio statistics with interactive charts
+- Orderbook and trades visualization
+- Market exploration with multiple cryptocurrencies
+- Watchlist for tracking favorite assets
+- Wallet management with transaction history
+- AI-powered trading assistant
 
-## Deployment
+## Technologies Used
 
-Your project is live at:
+- Next.js 14 (App Router)
+- Tailwind CSS
+- Recharts for data visualization
+- Lucide React for icons
+- TypeScript
 
-**[https://vercel.com/vannam34760gmailcoms-projects/v0-recreate-ui-from-screenshot](https://vercel.com/vannam34760gmailcoms-projects/v0-recreate-ui-from-screenshot)**
+## Getting Started
 
-## Build your app
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Run the development server with `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-Continue building your app on:
+## Project Structure
 
-**[https://v0.dev/chat/projects/FWMjp8HX92c](https://v0.dev/chat/projects/FWMjp8HX92c)**
+- `/app` - Next.js app router pages
+- `/components` - Reusable UI components
+- `/public` - Static assets
 
-## How It Works
+## License
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+MIT
