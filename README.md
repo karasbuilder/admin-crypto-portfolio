@@ -1,6 +1,5 @@
 # Cryptocurrency Trading Dashboard
 
-A modern cryptocurrency trading dashboard built with Next.js and Tailwind CSS.
 
 ![Cryptocurrency Dashboard Interface](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-21%20at%2000.01.09-1DI8PlTigyTXyu5nPuXVjFdbqYc5Av.png)
 
