@@ -85,11 +85,11 @@ export default function ExploreMarket() {
   ]
 
   return (
-    <div className="bg-white rounded-lg border p-4">
+    <div className="bg-card rounded-lg border border-border p-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-bold">Explore Market</h2>
         <button>
-          <MoreVertical className="h-5 w-5 text-gray-400" />
+          <MoreVertical className="h-5 w-5 text-muted-foreground" />
         </button>
       </div>
 
@@ -97,7 +97,7 @@ export default function ExploreMarket() {
         <div className="min-w-[800px]">
           <table className="w-full">
             <thead>
-              <tr className="text-xs text-gray-500 border-b">
+              <tr className="text-xs text-muted-foreground border-b border-border">
                 <th className="pb-2 text-left">CRYPTO NAME</th>
                 <th className="pb-2 text-left">BUY PRICE</th>
                 <th className="pb-2 text-left">SELL PRICE</th>
@@ -108,7 +108,7 @@ export default function ExploreMarket() {
             </thead>
             <tbody>
               {cryptoData.map((crypto, index) => (
-                <tr key={index} className="border-b last:border-0">
+                <tr key={index} className="border-b border-border last:border-0">
                   <td className="py-3">
                     <div className="flex items-center">
                       <div className={`${crypto.iconColor} rounded-full h-6 w-6 flex items-center justify-center mr-2`}>

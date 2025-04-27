@@ -45,17 +45,17 @@ export default function MarketTrades() {
   ]
 
   return (
-    <div className="bg-white rounded-lg border p-4">
+    <div className="bg-card rounded-lg border border-border p-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-bold">Market Trades</h2>
         <button>
-          <MoreVertical className="h-5 w-5 text-gray-400" />
+          <MoreVertical className="h-5 w-5 text-muted-foreground" />
         </button>
       </div>
 
       <div className="overflow-x-auto -mx-4 px-4">
         <div className="min-w-[400px]">
-          <div className="grid grid-cols-3 gap-2 mb-2 text-xs text-gray-500">
+          <div className="grid grid-cols-3 gap-2 mb-2 text-xs text-muted-foreground">
             <div>Price (USD)</div>
             <div>Size (BTC)</div>
             <div>Time</div>
@@ -63,7 +63,10 @@ export default function MarketTrades() {
 
           <div className="space-y-2">
             {marketTradesData.map((item, index) => (
-              <div key={index} className="grid grid-cols-3 gap-2 text-xs border-b pb-2 last:border-0 last:pb-0">
+              <div
+                key={index}
+                className="grid grid-cols-3 gap-2 text-xs border-b border-border pb-2 last:border-0 last:pb-0"
+              >
                 <div className="text-emerald-500">{item.price}</div>
                 <div>{item.size}</div>
                 <div>{item.time}</div>

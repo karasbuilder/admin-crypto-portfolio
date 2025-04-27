@@ -35,33 +35,33 @@ export default function SideNavigation({ onCloseMobile }: SideNavigationProps) {
   }
 
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="w-full h-full flex flex-col bg-card text-card-foreground">
       <nav className="py-6 flex-1">
         <ul className="space-y-6">
           <li>
             <Link
               href="/dashboard"
               onClick={handleClick}
-              className={`flex items-center w-full px-6 py-2 font-medium relative group transition-all duration-200 hover:bg-emerald-50 active:bg-emerald-100 rounded-md ${
-                isActive("/dashboard") ? "text-emerald-700" : "text-gray-500"
+              className={`flex items-center w-full px-6 py-2 font-medium relative group transition-all duration-200 hover:bg-primary/10 active:bg-primary/20 rounded-md ${
+                isActive("/dashboard") ? "text-primary" : "text-muted-foreground"
               }`}
             >
               <div className="relative mr-3 flex items-center justify-center">
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-md opacity-${isActive("/dashboard") ? "20" : "0"} group-hover:opacity-30 transition-opacity duration-200`}
+                  className={`absolute inset-0 bg-gradient-to-br from-primary to-primary/80 rounded-md opacity-${isActive("/dashboard") ? "20" : "0"} group-hover:opacity-30 transition-opacity duration-200`}
                 ></div>
                 <div className="grid grid-cols-2 gap-0.5 p-1">
-                  <div className="h-1.5 w-1.5 bg-emerald-600 rounded-sm"></div>
-                  <div className="h-1.5 w-1.5 bg-emerald-600 rounded-sm"></div>
-                  <div className="h-1.5 w-1.5 bg-emerald-600 rounded-sm"></div>
-                  <div className="h-1.5 w-1.5 bg-emerald-600 rounded-sm"></div>
+                  <div className="h-1.5 w-1.5 bg-primary rounded-sm"></div>
+                  <div className="h-1.5 w-1.5 bg-primary rounded-sm"></div>
+                  <div className="h-1.5 w-1.5 bg-primary rounded-sm"></div>
+                  <div className="h-1.5 w-1.5 bg-primary rounded-sm"></div>
                 </div>
               </div>
               <span className="transition-all duration-200 group-hover:translate-x-1 group-active:translate-x-0">
                 Dashboard
               </span>
               <span
-                className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-emerald-600 rounded-r transition-all duration-200 ${isActive("/dashboard") ? "h-4/5" : "group-hover:h-4/5"}`}
+                className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-primary rounded-r transition-all duration-200 ${isActive("/dashboard") ? "h-4/5" : "group-hover:h-4/5"}`}
               ></span>
             </Link>
           </li>
@@ -69,8 +69,8 @@ export default function SideNavigation({ onCloseMobile }: SideNavigationProps) {
             <Link
               href="/wallet"
               onClick={handleClick}
-              className={`flex items-center w-full px-6 py-2 font-medium relative group transition-all duration-200 hover:bg-emerald-50 active:bg-emerald-100 rounded-md ${
-                isActive("/wallet") ? "text-emerald-700" : "text-gray-500"
+              className={`flex items-center w-full px-6 py-2 font-medium relative group transition-all duration-200 hover:bg-primary/10 active:bg-primary/20 rounded-md ${
+                isActive("/wallet") ? "text-primary" : "text-muted-foreground"
               }`}
             >
               <Wallet className="h-5 w-5 mr-3 transition-transform duration-200 group-hover:scale-110 group-active:scale-95" />
@@ -78,7 +78,7 @@ export default function SideNavigation({ onCloseMobile }: SideNavigationProps) {
                 Wallet
               </span>
               <span
-                className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-emerald-600 rounded-r transition-all duration-200 ${isActive("/wallet") ? "h-4/5" : "group-hover:h-4/5"}`}
+                className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-primary rounded-r transition-all duration-200 ${isActive("/wallet") ? "h-4/5" : "group-hover:h-4/5"}`}
               ></span>
             </Link>
           </li>
@@ -86,8 +86,8 @@ export default function SideNavigation({ onCloseMobile }: SideNavigationProps) {
             <Link
               href="/statistics"
               onClick={handleClick}
-              className={`flex items-center w-full px-6 py-2 font-medium relative group transition-all duration-200 hover:bg-emerald-50 active:bg-emerald-100 rounded-md ${
-                isActive("/statistics") ? "text-emerald-700" : "text-gray-500"
+              className={`flex items-center w-full px-6 py-2 font-medium relative group transition-all duration-200 hover:bg-primary/10 active:bg-primary/20 rounded-md ${
+                isActive("/statistics") ? "text-primary" : "text-muted-foreground"
               }`}
             >
               <BarChart2 className="h-5 w-5 mr-3 transition-transform duration-200 group-hover:scale-110 group-active:scale-95" />
@@ -95,7 +95,7 @@ export default function SideNavigation({ onCloseMobile }: SideNavigationProps) {
                 Statistics
               </span>
               <span
-                className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-emerald-600 rounded-r transition-all duration-200 ${isActive("/statistics") ? "h-4/5" : "group-hover:h-4/5"}`}
+                className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-primary rounded-r transition-all duration-200 ${isActive("/statistics") ? "h-4/5" : "group-hover:h-4/5"}`}
               ></span>
             </Link>
           </li>
@@ -103,8 +103,8 @@ export default function SideNavigation({ onCloseMobile }: SideNavigationProps) {
             <Link
               href="/chat"
               onClick={handleClick}
-              className={`flex items-center w-full px-6 py-2 font-medium relative group transition-all duration-200 hover:bg-emerald-50 active:bg-emerald-100 rounded-md ${
-                isActive("/chat") ? "text-emerald-700" : "text-gray-500"
+              className={`flex items-center w-full px-6 py-2 font-medium relative group transition-all duration-200 hover:bg-primary/10 active:bg-primary/20 rounded-md ${
+                isActive("/chat") ? "text-primary" : "text-muted-foreground"
               }`}
             >
               <MessageSquare className="h-5 w-5 mr-3 transition-transform duration-200 group-hover:scale-110 group-active:scale-95" />
@@ -112,7 +112,7 @@ export default function SideNavigation({ onCloseMobile }: SideNavigationProps) {
                 AI Chat
               </span>
               <span
-                className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-emerald-600 rounded-r transition-all duration-200 ${isActive("/chat") ? "h-4/5" : "group-hover:h-4/5"}`}
+                className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-primary rounded-r transition-all duration-200 ${isActive("/chat") ? "h-4/5" : "group-hover:h-4/5"}`}
               ></span>
             </Link>
           </li>
@@ -120,8 +120,8 @@ export default function SideNavigation({ onCloseMobile }: SideNavigationProps) {
             <Link
               href="/settings"
               onClick={handleClick}
-              className={`flex items-center w-full px-6 py-2 font-medium relative group transition-all duration-200 hover:bg-emerald-50 active:bg-emerald-100 rounded-md ${
-                isActive("/settings") ? "text-emerald-700" : "text-gray-500"
+              className={`flex items-center w-full px-6 py-2 font-medium relative group transition-all duration-200 hover:bg-primary/10 active:bg-primary/20 rounded-md ${
+                isActive("/settings") ? "text-primary" : "text-muted-foreground"
               }`}
             >
               <Settings className="h-5 w-5 mr-3 transition-transform duration-200 group-hover:scale-110 group-active:scale-95" />
@@ -129,19 +129,19 @@ export default function SideNavigation({ onCloseMobile }: SideNavigationProps) {
                 Settings
               </span>
               <span
-                className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-emerald-600 rounded-r transition-all duration-200 ${isActive("/settings") ? "h-4/5" : "group-hover:h-4/5"}`}
+                className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-primary rounded-r transition-all duration-200 ${isActive("/settings") ? "h-4/5" : "group-hover:h-4/5"}`}
               ></span>
             </Link>
           </li>
         </ul>
       </nav>
 
-      <div className="px-6 py-6 border-t mt-auto text-center">
+      <div className="px-6 py-6 border-t border-border mt-auto text-center">
         <a
           href="https://github.com/karasbuilder"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-gray-500 hover:text-emerald-600 transition-colors duration-200 flex items-center justify-center"
+          className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 flex items-center justify-center"
         >
           <span className="font-medium">@author Karas</span>
         </a>

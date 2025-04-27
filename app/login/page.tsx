@@ -16,6 +16,8 @@ export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
   const [successMessage, setSuccessMessage] = useState("")
+  // First, add a new state variable for the "remember me" checkbox
+  const [rememberMe, setRememberMe] = useState(false)
 
   // Example credentials
   const demoCredentials = {
@@ -36,6 +38,7 @@ export default function LoginPage() {
     }
   }, [searchParams])
 
+  // Update the handleLogin function to include the remember me functionality
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
     setError("")
@@ -44,11 +47,22 @@ export default function LoginPage() {
     // For demo purposes, accept any credentials
     // In a real app, you would validate against your backend
     setTimeout(() => {
-      // Set login state
-      document.cookie = "isLoggedIn=true; path=/; max-age=3600"
+      // Set login state with appropriate expiration based on remember me
+      if (rememberMe) {
+        // If remember me is checked, set a cookie with a longer expiration (30 days)
+        document.cookie = "isLoggedIn=true; path=/; max-age=2592000"
+        // Also store the username in localStorage for auto-fill on next visit
+        localStorage.setItem("rememberedUsername", username)
+      } else {
+        // Short session (1 hour)
+        document.cookie = "isLoggedIn=true; path=/; max-age=3600"
+        // Clear any previously remembered username
+        localStorage.removeItem("rememberedUsername")
+      }
+
       sessionStorage.setItem("isLoggedIn", "true")
 
-      // Redirect to dashboard - FIXED: explicitly redirect to /dashboard
+      // Redirect to dashboard
       router.push("/dashboard")
     }, 1000)
   }
@@ -57,6 +71,15 @@ export default function LoginPage() {
     setUsername(demoCredentials.username)
     setPassword(demoCredentials.password)
   }
+
+  // Add a useEffect to check for remembered username when the component mounts
+  useEffect(() => {
+    const rememberedUsername = localStorage.getItem("rememberedUsername")
+    if (rememberedUsername) {
+      setUsername(rememberedUsername)
+      setRememberMe(true)
+    }
+  }, [])
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -143,6 +166,8 @@ export default function LoginPage() {
                 id="remember-me"
                 name="remember-me"
                 type="checkbox"
+                checked={rememberMe}
+                onChange={() => setRememberMe(!rememberMe)}
                 className="h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded"
               />
               <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">

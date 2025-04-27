@@ -3,11 +3,11 @@ import { MoreVertical, ChevronDown, ChevronUp } from "lucide-react"
 
 export default function OrderbookTrades() {
   return (
-    <div className="bg-white rounded-lg border p-4">
+    <div className="bg-card rounded-lg border border-border p-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-bold">Orderbook and Trades</h2>
         <button>
-          <MoreVertical className="h-5 w-5 text-gray-400" />
+          <MoreVertical className="h-5 w-5 text-muted-foreground" />
         </button>
       </div>
 
@@ -31,8 +31,8 @@ export default function OrderbookTrades() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <div className="grid grid-cols-2 gap-2 mb-2">
-            <div className="text-xs text-gray-500">Bid Size (BTC)</div>
-            <div className="text-xs text-gray-500">Bid Price (USD)</div>
+            <div className="text-xs text-muted-foreground">Bid Size (BTC)</div>
+            <div className="text-xs text-muted-foreground">Bid Price (USD)</div>
           </div>
 
           <div className="space-y-1">
@@ -55,8 +55,8 @@ export default function OrderbookTrades() {
 
         <div>
           <div className="grid grid-cols-2 gap-2 mb-2">
-            <div className="text-xs text-gray-500">Ask Price (USD)</div>
-            <div className="text-xs text-gray-500">Ask Size (BTC)</div>
+            <div className="text-xs text-muted-foreground">Ask Price (USD)</div>
+            <div className="text-xs text-muted-foreground">Ask Size (BTC)</div>
           </div>
 
           <div className="space-y-1">
@@ -81,46 +81,46 @@ export default function OrderbookTrades() {
       <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 mt-4">
         <div className="space-y-2">
           <div className="grid grid-cols-2 gap-2">
-            <div className="text-xs text-gray-500">Vol</div>
+            <div className="text-xs text-muted-foreground">Vol</div>
             <div className="text-xs">$7,998</div>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            <div className="text-xs text-gray-500">Open</div>
+            <div className="text-xs text-muted-foreground">Open</div>
             <div className="text-xs text-red-500">7,028.01</div>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            <div className="text-xs text-gray-500">Low</div>
+            <div className="text-xs text-muted-foreground">Low</div>
             <div className="text-xs text-red-500">6,967.37</div>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            <div className="text-xs text-gray-500">52w L</div>
+            <div className="text-xs text-muted-foreground">52w L</div>
             <div className="text-xs">6,699.30</div>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            <div className="text-xs text-gray-500">Mkt Cap</div>
+            <div className="text-xs text-muted-foreground">Mkt Cap</div>
             <div className="text-xs">0</div>
           </div>
         </div>
 
         <div className="space-y-2">
           <div className="grid grid-cols-2 gap-2">
-            <div className="text-xs text-gray-500">Shares</div>
+            <div className="text-xs text-muted-foreground">Shares</div>
             <div className="text-xs">939.91M PCS</div>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            <div className="text-xs text-gray-500">Trades</div>
+            <div className="text-xs text-muted-foreground">Trades</div>
             <div className="text-xs">87.85K</div>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            <div className="text-xs text-gray-500">High</div>
+            <div className="text-xs text-muted-foreground">High</div>
             <div className="text-xs text-emerald-500">7,054.28</div>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            <div className="text-xs text-gray-500">52w H</div>
+            <div className="text-xs text-muted-foreground">52w H</div>
             <div className="text-xs">7,459.20</div>
           </div>
           <div className="grid grid-cols-2 gap-2">
-            <div className="text-xs text-gray-500">NFI/FI</div>
+            <div className="text-xs text-muted-foreground">NFI/FI</div>
             <div className="text-xs text-emerald-500">932.18M</div>
           </div>
         </div>

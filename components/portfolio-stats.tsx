@@ -20,18 +20,18 @@ export default function PortfolioStats() {
   ]
 
   return (
-    <div className="bg-white rounded-lg border p-4">
+    <div className="bg-card rounded-lg border border-border p-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-bold">Portfolio Stats</h2>
         <button>
-          <MoreVertical className="h-5 w-5 text-gray-400" />
+          <MoreVertical className="h-5 w-5 text-muted-foreground" />
         </button>
       </div>
 
       <div className="mb-4">
-        <div className="text-xs text-gray-500">Price</div>
+        <div className="text-xs text-muted-foreground">Price</div>
         <div className="text-2xl font-bold">$41,561.22</div>
-        <div className="text-xs text-gray-500">Currency</div>
+        <div className="text-xs text-muted-foreground">Currency</div>
         <div className="text-sm font-medium">USD</div>
       </div>
 
@@ -78,31 +78,31 @@ export default function PortfolioStats() {
 
       <div className="flex justify-end mt-4 space-x-2">
         <button
-          className={`px-2 py-1 text-xs rounded ${activeTab === "24H" ? "bg-gray-200" : ""}`}
+          className={`px-2 py-1 text-xs rounded ${activeTab === "24H" ? "bg-muted text-foreground" : ""}`}
           onClick={() => setActiveTab("24H")}
         >
           24H
         </button>
         <button
-          className={`px-2 py-1 text-xs rounded ${activeTab === "1W" ? "bg-gray-200" : ""}`}
+          className={`px-2 py-1 text-xs rounded ${activeTab === "1W" ? "bg-muted text-foreground" : ""}`}
           onClick={() => setActiveTab("1W")}
         >
           1W
         </button>
         <button
-          className={`px-2 py-1 text-xs rounded ${activeTab === "1M" ? "bg-gray-200" : ""}`}
+          className={`px-2 py-1 text-xs rounded ${activeTab === "1M" ? "bg-muted text-foreground" : ""}`}
           onClick={() => setActiveTab("1M")}
         >
           1M
         </button>
         <button
-          className={`px-2 py-1 text-xs rounded ${activeTab === "3M" ? "bg-gray-200" : ""}`}
+          className={`px-2 py-1 text-xs rounded ${activeTab === "3M" ? "bg-muted text-foreground" : ""}`}
           onClick={() => setActiveTab("3M")}
         >
           3M
         </button>
         <button
-          className={`px-2 py-1 text-xs rounded ${activeTab === "1Y" ? "bg-gray-200" : ""}`}
+          className={`px-2 py-1 text-xs rounded ${activeTab === "1Y" ? "bg-muted text-foreground" : ""}`}
           onClick={() => setActiveTab("1Y")}
         >
           1Y
